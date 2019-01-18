@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.android.scowluga.dawn.ManualFragment"
+    android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            >
+                <biz.kasual.materialnumberpicker.MaterialNumberPicker
+                    android:id="@+id/numberPicker"
+                    android:layout_width="50dp"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    app:npMinValue="0"
+                    app:npMaxValue="20"
+                    app:npDefaultValue="10"
+                    app:npBackgroundColor="@color/white"
+                    app:npSeparatorColor="@color/colorAccent"
+                    app:npTextColor="@color/black"
+                    app:npTextSize="20sp"
+                    />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/numberPicker"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                    <Button
+                        android:text="Go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+                <!--So "Open Blinds By:" can be centered -->
+
+                    <TextView
+                        android:id="@+id/openTV"
+                        android:text="Open Blinds By: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/mTextView"
+                        />
+
+                    <Button
+                        android:id="@+id/sendButton"
+                        android:text="Go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                        />
+            </LinearLayout>
+
+        <Button
+            android:id="@+id/snoozeBtn"
+            android:text="Send Snooze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/numberPicker"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_marginTop="100dp"
+            />
+
+        <Button
+            android:id="@+id/dismissBtn"
+            android:text="Send Dismiss"
+            android:layout_below="@id/snoozeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+            />
+        </RelativeLayout>
+</RelativeLayout>
